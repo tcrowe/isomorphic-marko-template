@@ -1,0 +1,22 @@
+$ const { pathname } = state;
+
+<div id="inner">
+  <app-nav/>
+
+  <main id="content">
+    <if(pathname === "/")>
+      <page-home/>
+    </if>
+    <else-if(pathname === "/resources")>
+      <page-resources/>
+    </else-if>
+    <else-if(pathname === "/about")>
+      <page-about/>
+    </else-if>
+    <else>
+      🤷‍♂️ We can't find that.
+    </else>
+  </main>
+
+  <app-footer/>
+</div>

@@ -1,0 +1,14 @@
+
+body {
+  font-family: sans-serif;
+}
+
+#app-nav,
+#app-footer {
+  background-color: #EEEEEE;
+  padding: 0.3rem 0.6rem;
+}
+
+#app-nav a {
+  margin-right: 1rem;
+}

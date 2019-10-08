@@ -1,0 +1,52 @@
+{
+  "name": "isomorphic-marko-template",
+  "version": "0.1.0",
+  "description": "isomorphic marko template - test ideas",
+  "author": "Tony Crowe <npm@tonycrowe.com> (https://github.com/tcrowe)",
+  "license": "GPL-3.0",
+  "homepage": "https://github.com/tcrowe/isomorphic-marko-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tcrowe/isomorphic-marko-template.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/tcrowe/isomorphic-marko-template/issues"
+  },
+  "main": "src/index.js",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cookie-session": "^1.3.3",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
+    "marko": "^4.18.14",
+    "nocache": "^2.1.0"
+  },
+  "devDependencies": {
+    "@marko/webpack": "^2.0.0",
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "mocha": "^6.2.1",
+    "nodemon": "^1.19.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "should": "^13.2.3",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "setup": "mkdir -p dist",
+    "dev-copy-css": "cp src/client.css src/favicon.ico dist",
+    "dev-eslint": "nodemon -q -w src -w test --exec 'eslint --cache --fix --ignore-pattern '*.marko.js' --format unix src test' || true",
+    "dev-mocha": "sleep 3 && nodemon -q -d 1 -w src -w test --exec 'mocha' || true",
+    "dev-server": "nodemon -q -w src --ext js,marko -i '*.marko.js' src/server.js || true",
+    "dev-webpack": "webpack --watch --config ./webpack.config.js || true",
+    "dev": "run-s setup && run-p dev-*",
+    "test": "mocha",
+    "prd-eslint": "eslint --format unix src test",
+    "prd": "run-s clean prd-* test"
+  }
+}
