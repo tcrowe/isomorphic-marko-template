@@ -3,10 +3,11 @@
 
 This is a dual-purpose repository for testing ideas with the [marko language](https://markojs.com).
 
-+ starter template for your project
-+ bootstrap a project for demonstrating a bug
-+ render via SSR
-+ but also navigate like an SPA with html5 push navigation
++ Starter template for your project
++ Demonstrating a bug
++ Render via SSR
++ Also navigate like an SPA with html5 push navigation
++ User session with [cookie-session](https://github.com/expressjs/cookie-session#readme). To use set `req.session.loggedIn = true` or whatever you need.
 
 ## Development
 
