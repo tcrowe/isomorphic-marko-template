@@ -5,6 +5,8 @@ This is a dual-purpose repository for testing ideas with the [marko language](ht
 
 + starter template for your project
 + bootstrap a project for demonstrating a bug
++ render via SSR
++ but also navigate like an SPA with html5 push navigation
 
 ## Development
 
@@ -29,6 +31,12 @@ open http://127.0.0.1:7162
 npm run clean
 npm run prd
 ```
+
+## Example
+
+It looks like this when you load it.
+
+![./img/home-page-example.png](./img/home-page-example.png)
 
 ## Copying, license, and contributing
 

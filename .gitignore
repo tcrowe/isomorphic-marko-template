@@ -7,3 +7,4 @@ Thumbs.db
 .eslintcache
 cookie-secret.txt
 *.marko.js
+dist
